@@ -108,8 +108,12 @@ Ejecuta el método main para verificar que:
 * El código es más legible y expresivo
 
 #### Preguntas de Análisis:
-- ¿Cómo mejora la legibilidad del código cliente el uso del patrón Builder?
-- ¿Qué ventaja tiene hacer la clase `Builder` estática e interna?
-- ¿Garantiza este patrón la inmutabilidad del objeto `User`? ¿Por qué?
+- ¿Cómo mejora la legibilidad del código cliente el uso del patrón Builder?  El formato en que se acomoda te permite visualizar de forma más fácil que significa cada y en que orden va y al tener muchos parámetros seguidos no es tan fácil la lectura sin este patrón.
+
+
+- ¿Qué ventaja tiene hacer la clase `Builder` estática e interna? Simplemente es orden para el código, usa el constructor privado de User y además porque se hizo static, sucede algo similar que en singleton, ya no se debe de crear el objeto, además en esta ocasión no tendría sentido porque el patrón se llama Builder y queremos construir el User
+
+
+- ¿Garantiza este patrón la inmutabilidad del objeto `User`? ¿Por qué? No, tengo entendido que no, pero nos acercamos a la inmutabilidad, mientras se arma el Builderlos datros si se van modificando, pero al llegar al método build elmUser ya queda tal cual.
 
 ---
